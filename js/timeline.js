@@ -30,11 +30,14 @@ jQuery(document).ready(function($){
 	$('.cd-timeline-content').click(function(){
 		var content = this;
 		var ptag = $(this).find('p');
-		var actualHeight = ( ptag.text().length > 300)? ptag.text().length - (2*ptag.text().length/5) 	: (( ptag.text().length > 100))? ptag.text().length : 100 ;
-		$(this).animate({height:actualHeight+'px'},function(){
-			ptag.fadeIn('slow',function(){setTimeout(showBlocks(timelineBlocks),200)});
-		});
-		clicked++;
+		if(!ptag.is(":visible")){
+			var newHeight = $(this).height()+ptag.height()+$(this).parent().height() ;
+			// var newHeight =  $(this).height()+ptag.height()+$(this).parent().height() ;
+			$(this).animate({height: newHeight+'px'},function(){
+				ptag.fadeIn('slow',function(){setTimeout(showBlocks(timelineBlocks),400)});
+			});
+			clicked++;
+		}
 	}
 )
 	window.requestAnimationFrame(function(){ showBlocks(timelineBlocks); });
