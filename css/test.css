@@ -1,0 +1,105 @@
+body{background:url('http://lorempixel.com/700/500/sports/9/');}
+#wrapper {
+    padding-top:120px;
+
+}
+.text{
+    display:block;
+    background-image:-webkit-linear-gradient( rgba(225, 225, 225, 1),
+        rgba(195, 195, 195, 1) );
+    background-image:-moz-linear-gradient( rgba(225, 225, 225, 1),
+        rgba(195, 195, 195, 1) );
+    background-image:-o-linear-gradient( rgba(225, 225, 225, 1),
+        rgba(195, 195, 195, 1) );
+    border: #000 1px solid;
+    height:auto;
+    width:200px;
+    position:relative;
+    left:0;
+    padding:20px;
+    float:left;
+    margin: 20px;
+    overflow:hidden;
+}
+.text:hover{
+     overflow: visible;
+}
+.tool{
+    height:auto;
+    width:180px;
+    background-image:-webkit-linear-gradient( rgba(125, 125, 125, 0.5) 50%,
+        rgba(95, 95, 95, 0.5) 50%,
+        rgba(55, 55, 55, 0.5));
+    background-image:-moz-linear-gradient( rgba(125, 125, 125, 0.5) 50%,
+        rgba(95, 95, 95, 0.5) 50%,
+        rgba(55, 55, 55, 0.5));
+    background-image:-o-linear-gradient( rgba(125, 125, 125, 0.5) 50%,
+        rgba(95, 95, 95, 0.5) 50%,
+        rgba(55, 55, 55, 0.5));
+    position:absolute;
+    left:0;
+    bottom:100%;
+    margin-bottom:20px;
+    padding:10px;
+    color:rgb(255,255,255);
+    border: 2px solid rgba(255,255,255,1);
+    border-bottom:0;
+    opacity: 1;
+    z-index:0;
+    border-radius:10px;
+    font-family:Helvetica, Arial, Verdana, sans-serif;
+    font-size:13px;
+    font-weight:bold;
+}
+
+
+.tool:before{
+    content:'';
+    width:25px;
+    height:15px;
+    border-bottom: 2px solid rgba(255,255,255,1);
+    border-left: 2px solid rgba(255,255,255,1);
+    position:absolute;
+    bottom:0;
+    left:-2px;
+    border-bottom-left-radius:10px;
+
+}
+.tool:after{
+    content:'';
+    width:148px;
+    height:15px;
+    border-bottom: 2px solid rgba(255,255,255,1);
+    border-right: 2px solid rgba(255,255,255,1);
+    position:absolute;
+    display:block;
+    bottom:0;
+    right:-2px;
+    border-bottom-right-radius:10px;
+}
+
+
+.tool .tip{
+    content: '';
+    height:20px;
+    width:20px;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    position:absolute;
+    bottom:-10px;
+    left:27px;
+    background-image:-webkit-linear-gradient(45deg,
+        rgba(55, 55, 55, 0.5) 41%,
+        transparent 41%, transparent);
+    background-image:-moz-linear-gradient(45deg,
+        rgba(55, 55, 55, 0.5) 41%,
+        transparent 41%, transparent);
+    background-image:-o-linear-gradient(45deg,
+        rgba(55, 55, 55, 0.5) 41%,
+        transparent 41%, transparent);
+    z-index:1;
+    border-left: 2px solid rgba(255,255,255,1);
+    border-bottom: 2px solid rgba(255,255,255,1);
+    box-shadow: -2px 2px 2px rgba(0,0,0,0.8);
+}
