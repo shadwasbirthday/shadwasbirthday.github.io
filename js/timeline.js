@@ -31,7 +31,7 @@ jQuery(document).ready(function($){
 		var content = this;
 		var ptag = $(this).find('p');
 		if(!ptag.is(":visible")){
-			var newHeight = $(this).height()+ptag.height()+$(this).parent().height() ;
+			var newHeight = $(this).height()+ptag.height()+$(this).parent().height() +10 ;
 			// var newHeight =  $(this).height()+ptag.height()+$(this).parent().height() ;
 			$(this).animate({height: newHeight+'px'},function(){
 				ptag.fadeIn('slow',function(){setTimeout(showBlocks(timelineBlocks),400)});
